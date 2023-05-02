@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: usermanagement-dbcreation-script
+data: 
+  initdb.sh: |-
+    echo "CREATE DATABASE IF NOT EXISTS SF" | mysql --host=localhost --user=root --password=$MYSQL_ROOT_PASSWORD
+    
